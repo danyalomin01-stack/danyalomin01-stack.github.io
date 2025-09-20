@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+    <head> 
+        <title>Страница 1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="margin: 0; background-color: blueviolet;" class="code">
+        <header>
+            <div class="main">
+                <img class="logo" src="images.png" alt="">
+                <div id="inside_main">
+                    Верстка сайта
+                    <div id="main-nav">
+                        <nav>
+                            <a href="page2/page2.html">Страница 2</a>
+                            <a href="page3.html">Страница 3</a>
+                            <a href="#about">фрагмент</a>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        
+        <div id="content" >
+            <h1>Задание 1</h1>
+            <ul>
+                <li> <a href="http://kubsu.ru">Перейти  на главную страницу сайта kubsu.ru</a> </li>
+                <li> <a href="https://kubsu.ru">Перейти  на главную страницу сайта kubsu.ru</a> </li>
+                <li> <a href="//kubsu.ru"><img src="image.jpg" alt="Цветок" width="300" /></a> </li>
+                <li> <a href="page2/page2.html">Сокращенная ссылка на внутреннюю страницу</a> </li>
+                <li> <a href="#about" >Ссылка на фрагмент</a> </li>
+
+                <li> <a href="page2/page2.html?category=books&price=100&sort=popular">Ссылка с тремя параметрами в URL </a> </li>
+                <li> <a href="page2/page2.html/item?id=1234" >Ссылка с параметром id в URL </a> </li>
+
+                <li> <a href="./page3.html" >Относительная ссылка на страницу в текущем каталоге</a> </li>
+                <li> <a href="./about/page4.html" >Относительная ссылка на страницу в каталоге about</a> </li>
+                <li> Для 12 пункта перейдем <a href="./about/aaa/page5.html" >сюда</a> </li>
+                <li> Пункт 13 в пункте 12 </li>
+                <li> <a href="https://ru.wikipedia.org/wiki/Сайт#Создание_сайтов" >Ссылка на фрагмент стороннего сайта</a> </li>
+                <li> <img src="image.jpg" alt="Цветок" usemap="#flowermap" width="300"/> </li>
+                <li> <a href="">Пустой href</a> </li>
+                <li> <a>Без href</a> </li>
+                <li> <a href="https://ru.wikipedia.org/wiki/Автомобиль" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a> </li>
+                <noindex> <a href="page2/page2.html">Запрещенная для индексации поисковиками</a> </noindex>
+            </ul>
+            
+
+            <ol>
+                <li> <a href="https://ru.wikipedia.org/wiki/Автомобиль" title="Автомобиль">Ссылка 1</a> </li>
+                <li> <a href="https://ru.wikipedia.org/wiki/Книга" title="Книга">Ссылка 2</a> </li>
+                <li> <a href="https://ru.wikipedia.org/wiki/Моря_России" title="Моря России">Ссылка 3</a> </li>
+            </ol>
+
+            <p id="about">фрагмент</p>
+            <map name="flowermap">
+                <area shape="circle" coords="150,114,94" href="https://ru.wikipedia.org/wiki/Жёлтый_цвет" alt="Подсолнух">
+                <area shape="rect" coords="250,0,300,100" href="https://ru.wikipedia.org/wiki/Трава_(значения)" alt="Подсолнух">
+            </map>
+        </div>
+
+        <div id="content">
+            <h2>Таблица</h2>
+            <table>
+                <tbody>
+                    <tr class="brownt">
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                    <tr class="greent">
+                        <td>Ячейка1</td>
+                        <td>Ячейка2</td>
+                        <td>Ячейка3</td>
+                        <td>Ячейка4</td>
+                    </tr>
+                    <tr class="redt">
+                        <td colspan="2">Ячейка5 объеденена с Ячейкой6</td>
+                        <td>Ячейка7</td>
+                        <td>Ячейка8</td>
+                    </tr>
+                    <tr class="greent">
+                        <td colspan="3">Ячейка 9 10 и 11 объеденены</td>
+                        <td>Ячейка12</td>
+                    </tr>
+                    <tr class="redt">
+                        <td colspan="4">Все ячейки объеденены</td>
+                    </tr>
+                    <tr class="greent">
+                        <td>Ячейка17</td>
+                        <td colspan="3">Ячейка18 19 20 объеденены</td>
+                    </tr>
+                    <tr class="redt">
+                        <td>Ячейка21</td>
+                        <td>Ячейка22</td>
+                        <td>Ячейка23</td>
+                        <td>Ячейка24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="content">
+            <h2>Форма</h2>
+            <form action="/" method="post">
+                <label> 
+                    ФИО: <br />
+                    <input name="field-name-1" value="Иванов Иван Иванович" />
+                </label><br />
+                <label> 
+                    Телефон: <br />
+                    <input name="field-phone" value="89189188141" type="tel"/>
+                </label><br />
+                <label> 
+                    Email: <br />
+                    <input name="field-email" type="email" placeholder="Введите вашу почту"/>
+                </label><br />
+                <label> 
+                    Дата рождения: <br />
+                    <input name="field-date" type="date" value="2025-09-09"/>
+                </label><br />
+                Пол<br>
+                <label> 
+                    <input name="radio-group-1" type="radio" value="Значение1" checked="checked"/>
+                    Мужской
+                </label>
+                <label> 
+                    <input name="radio-group-1" type="radio" value="Значение2"/>
+                    Женский
+                </label><br />
+                <label> 
+                    Любимый язык программирования:<br />
+                    <select name="field-name-2" multiple="multiple">
+                        <option value="Значение1">Pascal</option>
+                        <option value="Значение2">C</option>
+                        <option value="Значение3">C++</option>
+                        <option value="Значение4">JavaScript</option>
+                        <option value="Значение5">PHP</option>
+                        <option value="Значение6">Python</option>
+                        <option value="Значение7">Java</option>
+                        <option value="Значение8">Haskel</option>
+                        <option value="Значение9">Clojure</option>
+                        <option value="Значение10">Prolog</option>
+                        <option value="Значение11">Scala</option>
+                    </select>
+                </label><br/>
+                <label> 
+                    Биография: <br />
+                    <textarea name="field-name-3">Я программист</textarea>
+                </label><br/>
+                <label>
+                    <input type="checkbox" name="check-1" checked="checked"/>
+                    C контрактом ознакомлен(а)
+                </label><br/>
+                <label>
+                    <input type="submit" value="Сохранить"/>
+                </label><br/>
+            </form>
+        </div>
+        <br>
+        <div id="main_footer">
+            <footer >
+                <div>(c) Правдин Данил </div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+
+
