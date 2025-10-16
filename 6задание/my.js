@@ -69,9 +69,10 @@ function f(){
             }
         }
     });
-
+    let kol = document.getElementById("kol");
+    let koll = parseInt(kol.value);
     let prodPrice = document.getElementById("prodPrice");
-    prodPrice.innerHTML = price+" рублей";
+    prodPrice.innerHTML = koll*price+" рублей";
 }
 function gerPrices(){
     return{
@@ -119,6 +120,10 @@ window.addEventListener("DOMContentLoaded",function(event){
             console.log(c.value);
             f();
         });
+    });
+    let kolInput = document.getElementById("kol");
+    kolInput.addEventListener("input", function(event) {
+        f(); 
     });
     f();
 });
