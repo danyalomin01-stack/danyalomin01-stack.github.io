@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Форма обратной связи</h1>
+        <button class="open-btn" id="openBtn">Открыть форму</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="form-container">
+            <button class="close-btn" id="closeBtn">×</button>
+            <h2>Обратная связь</h2>
+            
+            <form id="feedbackForm">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="ФИО" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон">
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="organization" name="organization" placeholder="Организация">
+                </div>
+                
+                <div class="input-group">
+                    <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Согласен с политикой обработки данных</label>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Отправить</button>
+                
+                <div class="message" id="messageDiv"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
